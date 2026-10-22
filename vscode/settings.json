@@ -11,6 +11,8 @@
 
   // ================= Editor =================
   "editor.formatOnSave": true,
+  "[json]": { "editor.formatOnSave": false },
+  "[jsonc]": { "editor.formatOnSave": false },
   "editor.rulers": [80, 120],
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
@@ -59,7 +61,7 @@
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": ["<C-c>"], "after": ["<Esc>"] }
   ],
-
+ 
   "vim.normalModeKeyBindingsNonRecursive": [
     // cursor stays put
     { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
@@ -101,7 +103,7 @@
 
     // git
     { "before": ["<leader>", "g", "s"], "commands": ["workbench.view.scm"] },
-    { "before": ["<leader>", "g", "b"], "commands": ["gitlens.toggleFileBlame"] },
+    { "before": ["<leader>", "g", "b"], "commands": ["git.blame.toggleEditorDecoration"] },
     { "before": ["<leader>", "g", "d"], "commands": ["git.openChange"] },
 
     // undotree-ish
@@ -124,7 +126,6 @@
 
     // misc
     { "before": ["<leader>", "x"], "commands": ["workbench.action.closeActiveEditor"] },
-    { "before": ["<leader>", "<leader>"], "commands": ["workbench.action.reloadWindow"] },
     { "before": ["<leader>", "s"], "commands": ["editor.action.startFindReplace"] },
     { "before": ["<leader>", "n"], "commands": [":nohl"] }
   ],
