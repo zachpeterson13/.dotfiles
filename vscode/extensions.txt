@@ -3,7 +3,6 @@
 
 # core
 vscodevim.vim
-eamodio.gitlens
 anthropic.claude-code
 catppuccin.catppuccin-vsc
 catppuccin.catppuccin-vsc-icons
@@ -20,7 +19,7 @@ usernamehw.errorlens
 #ms-vscode.cpptools
 
 # misc (uncomment if used)
-#mechatroner.rainbow-csv
+mechatroner.rainbow-csv
 #ms-vscode.hexeditor
-#bierner.markdown-preview-github-styles
+bierner.markdown-preview-github-styles
 #techer.open-in-browser
