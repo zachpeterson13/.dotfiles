@@ -1,0 +1,26 @@
+# One extension id per line. Lines starting with # are skipped.
+# Refresh from a machine: code --list-extensions > vscode/extensions.txt
+
+# core
+vscodevim.vim
+eamodio.gitlens
+anthropic.claude-code
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
+usernamehw.errorlens
+
+# python (uncomment if used)
+#ms-python.python
+#ms-python.vscode-pylance
+#ms-python.debugpy
+#ms-python.isort
+#ms-python.vscode-python-envs
+
+# c/c++ (uncomment if used)
+#ms-vscode.cpptools
+
+# misc (uncomment if used)
+#mechatroner.rainbow-csv
+#ms-vscode.hexeditor
+#bierner.markdown-preview-github-styles
+#techer.open-in-browser

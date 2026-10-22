@@ -1,0 +1,141 @@
+{
+  // ================= Appearance =================
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "editor.fontFamily": "Monocraft, Menlo, Monaco, 'Courier New', monospace",
+  "window.zoomLevel": 2,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": false,
+
+  // ================= Editor =================
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "off",
+  "editor.cursorSurroundingLines": 8, // replaces scrolloff extension
+  "files.autoSave": "onFocusChange",
+
+  // ================= Workbench =================
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.autoLockGroups": {
+    "mainThreadWebview-markdown.preview": true
+  },
+
+  // ================= Terminal =================
+  "terminal.integrated.fontFamily": "CaskaydiaCove NFM",
+  "terminal.integrated.tabs.location": "left",
+  "terminal.integrated.sendKeybindingsToShell": true,
+
+  // ================= Git =================
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // ================= Claude / security / privacy =================
+  "claudeCode.preferredLocation": "panel",
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": false,
+
+  // ================= Vim core =================
+  "vim.leader": "<space>",
+  "vim.smartRelativeLine": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": false,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": false,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.surround": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-u>": true
+  },
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    { "before": ["<C-c>"], "after": ["<Esc>"] }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // cursor stays put
+    { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    { "before": ["n"], "after": ["n", "z", "z"] },
+    { "before": ["N"], "after": ["N", "z", "z"] },
+    { "before": ["Q"], "after": [] },
+
+    // clipboard
+    { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] },
+    { "before": ["<leader>", "Y"], "after": ["\"", "+", "y", "y"] },
+    { "before": ["<leader>", "d"], "after": ["\"", "_", "d"] },
+
+    // files / search
+    { "before": ["<leader>", "p", "v"], "commands": ["workbench.files.action.focusFilesExplorer"] },
+    { "before": ["<leader>", "p", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "p", "s"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "p", "w"], "commands": ["workbench.action.showAllSymbols"] },
+    { "before": ["<leader>", "p", "r"], "commands": ["workbench.action.openRecent"] },
+    { "before": ["<leader>", "p", "c"], "commands": ["workbench.action.showCommands"] },
+
+    // harpoon-lite (Ctrl+h/t/n/s in keybindings.json)
+    { "before": ["<leader>", "a"], "commands": ["workbench.action.pinEditor"] },
+    { "before": ["<leader>", "A"], "commands": ["workbench.action.unpinEditor"] },
+
+    // lsp
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["K"], "commands": ["editor.action.showHover"] },
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+    { "before": ["<leader>", "v", "d"], "commands": ["editor.action.showHover"] },
+    { "before": ["<leader>", "v", "c", "a"], "commands": ["editor.action.quickFix"] },
+    { "before": ["<leader>", "v", "r", "r"], "commands": ["editor.action.goToReferences"] },
+    { "before": ["<leader>", "v", "r", "n"], "commands": ["editor.action.rename"] },
+    { "before": ["<leader>", "f"], "commands": ["editor.action.formatDocument"] },
+
+    // git
+    { "before": ["<leader>", "g", "s"], "commands": ["workbench.view.scm"] },
+    { "before": ["<leader>", "g", "b"], "commands": ["gitlens.toggleFileBlame"] },
+    { "before": ["<leader>", "g", "d"], "commands": ["git.openChange"] },
+
+    // undotree-ish
+    { "before": ["<leader>", "u"], "commands": ["timeline.focus"] },
+
+    // windows
+    { "before": ["<leader>", "w", "v"], "commands": ["workbench.action.splitEditorRight"] },
+    { "before": ["<leader>", "w", "s"], "commands": ["workbench.action.splitEditorDown"] },
+    { "before": ["<leader>", "w", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["<leader>", "w", "l"], "commands": ["workbench.action.focusRightGroup"] },
+    { "before": ["<leader>", "w", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["<leader>", "w", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["<leader>", "w", "o"], "commands": ["workbench.action.joinAllGroups"] },
+    { "before": ["<leader>", "w", "m"], "commands": ["workbench.action.toggleMaximizedPanel"] },
+
+    // terminal / panels
+    { "before": ["<leader>", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
+    { "before": ["<leader>", "b"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+    { "before": ["<leader>", "z"], "commands": ["workbench.action.toggleZenMode"] },
+
+    // misc
+    { "before": ["<leader>", "x"], "commands": ["workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "<leader>"], "commands": ["workbench.action.reloadWindow"] },
+    { "before": ["<leader>", "s"], "commands": ["editor.action.startFindReplace"] },
+    { "before": ["<leader>", "n"], "commands": [":nohl"] }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["<leader>", "p"], "after": ["\"", "_", "d", "P"] },
+    { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] },
+    { "before": ["<leader>", "d"], "after": ["\"", "_", "d"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] }
+  ]
+}

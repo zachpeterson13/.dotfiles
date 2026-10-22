@@ -1,0 +1,36 @@
+[
+  // Ctrl chords, Normal mode only (leaves insert-mode / suggest widget alone)
+  // harpoon-lite: pinned tabs first in tab order
+  { "key": "ctrl+h", "command": "workbench.action.openEditorAtIndex1", "when": "editorTextFocus && vim.mode == 'Normal'" },
+  { "key": "ctrl+t", "command": "workbench.action.openEditorAtIndex2", "when": "editorTextFocus && vim.mode == 'Normal'" },
+  { "key": "ctrl+n", "command": "workbench.action.openEditorAtIndex3", "when": "editorTextFocus && vim.mode == 'Normal'" },
+  { "key": "ctrl+s", "command": "workbench.action.openEditorAtIndex4", "when": "editorTextFocus && vim.mode == 'Normal'" },
+  { "key": "ctrl+e", "command": "workbench.action.showEditorsInActiveGroup", "when": "editorTextFocus && vim.mode == 'Normal'" },
+
+  // quickfix list -> problems
+  { "key": "ctrl+j", "command": "editor.action.marker.nextInFiles", "when": "editorTextFocus && vim.mode == 'Normal'" },
+  { "key": "ctrl+k", "command": "editor.action.marker.prevInFiles", "when": "editorTextFocus && vim.mode == 'Normal'" },
+
+  // fast file open anywhere
+  { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+
+  // completion: C-n/C-p navigate, C-y confirm (his cmp mappings)
+  { "key": "ctrl+n", "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+  { "key": "ctrl+p", "command": "selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+  { "key": "ctrl+y", "command": "acceptSelectedSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+  { "key": "ctrl+space", "command": "editor.action.triggerSuggest", "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly" },
+  { "key": "ctrl+h", "command": "editor.action.triggerParameterHints", "when": "editorTextFocus && vim.mode == 'Insert'" },
+
+  // Esc-free: ctrl+[ already works; keep tab for snippets, not completion
+  { "key": "tab", "command": "-acceptSelectedSuggestion", "when": "suggestWidgetVisible && textInputFocus && !inSnippetMode" },
+
+  // sidebar/explorer vim-style navigation (file tree: j/k/l/h/a/r/d)
+  { "key": "j", "command": "list.focusDown", "when": "listFocus && !inputFocus" },
+  { "key": "k", "command": "list.focusUp", "when": "listFocus && !inputFocus" },
+  { "key": "l", "command": "list.select", "when": "listFocus && !inputFocus" },
+  { "key": "h", "command": "list.collapse", "when": "listFocus && !inputFocus" },
+  { "key": "a", "command": "explorer.newFile", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "r", "command": "renameFile", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "d", "command": "deleteFile", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "escape", "command": "workbench.action.focusActiveEditorGroup", "when": "filesExplorerFocus && !inputFocus" }
+]
