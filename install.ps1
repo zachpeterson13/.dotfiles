@@ -38,7 +38,10 @@ if (Get-Command $CodeBin -ErrorAction SilentlyContinue) {
     Where-Object { $_.Trim() -and $_ -notmatch '^\s*#' } |
     ForEach-Object {
       $ext = $_.Trim()
+      # Node warnings on stderr become terminating errors under 'Stop'; relax for this call.
+      $ErrorActionPreference = 'Continue'
       & $CodeBin --install-extension $ext 2>&1 | Out-Null
+      $ErrorActionPreference = 'Stop'
       if ($LASTEXITCODE -eq 0) { Write-Host "ext    $ext" } else { Write-Warning "FAILED $ext" }
     }
 } else {
