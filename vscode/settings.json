@@ -61,7 +61,7 @@
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": ["<C-c>"], "after": ["<Esc>"] }
   ],
- 
+
   "vim.normalModeKeyBindingsNonRecursive": [
     // cursor stays put
     { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
