@@ -32,6 +32,9 @@
   "terminal.integrated.fontFamily": "CaskaydiaCove NFM",
   "terminal.integrated.tabs.location": "left",
   "terminal.integrated.sendKeybindingsToShell": true,
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.hideOnStartup": "always",
+  "python.terminal.shellIntegration.enabled": false,
 
   // ================= Git =================
   "git.autofetch": true,
