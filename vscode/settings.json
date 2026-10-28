@@ -43,7 +43,8 @@
   // ================= Claude / security / privacy =================
   "claudeCode.preferredLocation": "panel",
   "security.workspace.trust.untrustedFiles": "open",
-  "redhat.telemetry.enabled": false,
+  "claudeCode.attachOpenFile": false,
+  "claudeCode.useTerminal": true,
 
   // ================= Vim core =================
   "vim.leader": "<space>",
